@@ -1,5 +1,6 @@
 import os
-import modules.unoversusm as mk
+import modules.unoversusm as mq
+import random
 menuprincipal = """ ******************* The Cachipun ******************* 
                       Bienvenido al juego de Piedra, Papel o Tijera
                     ****************************************************
@@ -9,8 +10,6 @@ Menú
 2. Jugar con otro jugador
 3. Salir
 """
-import random
-
 def juego_con_maquina():
     print("Juego con la máquina")
     print("1. Piedra")
@@ -36,8 +35,13 @@ def juego_con_maquina():
 
     if jugador == maquina:
         print("*******************Empate******************* ")
+
+
     elif (jugador == "Piedra" and maquina == "Tijera") or (jugador == "Papel" and maquina == "Piedra") or (jugador == "Tijera" and maquina == "Papel"):
+       
         print("*******************Ganaste*******************")
+
+
     else:
         print("*******************Perdiste*******************")
 
@@ -91,7 +95,8 @@ def juego_con_otro_jugador():
 
 def main():
     while True:
-        print("Menú")
+        print("---------Menú---------")
+        
         print("1. Jugar con la máquina")
         print("2. Jugar con otro jugador")
         print("3. Salir")
