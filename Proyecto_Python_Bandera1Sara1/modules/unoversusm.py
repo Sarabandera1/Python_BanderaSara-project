@@ -28,4 +28,4 @@ def juego_con_maquina():
     elif (jugador == "Piedra" and maquina == "Tijera") or (jugador == "Papel" and maquina == "Piedra") or (jugador == "Tijera" and maquina == "Papel"):
         print("Ganaste")
     else:
-        print("Perdiste")
+        print("Perdiste")  
