@@ -1,4 +1,4 @@
-import menu
+import Proyecto_Python_Bandera1Sara1.main as main
 import modules.unoversusuno as unu
 
 def registroPuntajesJu (jugador, puntajeG=0, puntajeP=0):

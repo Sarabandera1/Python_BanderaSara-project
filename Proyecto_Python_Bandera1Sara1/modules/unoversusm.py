@@ -24,8 +24,8 @@ def juego_con_maquina():
     print(f"Máquina elegió: {maquina}\n")
 
     if jugador == maquina:
-        print("Empate")
+        print("--------Empate---------")
     elif (jugador == "Piedra" and maquina == "Tijera") or (jugador == "Papel" and maquina == "Piedra") or (jugador == "Tijera" and maquina == "Papel"):
-        print("Ganaste")
+        print("--------Ganaste---------")
     else:
-        print("Perdiste")  
+        print("--------Perdiste---------")

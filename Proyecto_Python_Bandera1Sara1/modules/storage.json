@@ -1,0 +1,15 @@
+{
+    "jugadores": [
+      {
+        "nombre": "Pepito Pérez",
+        "apodo": "pepo",
+        "puntos": 8,
+        "ganadas": 4,
+        "perdidas_vs_ia": 2
+      }
+    ],
+    "maquina": {
+      "ganadas": 5,
+      "perdidas": 7
+    }
+  }

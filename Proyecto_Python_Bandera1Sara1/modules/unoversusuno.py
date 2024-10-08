@@ -1,6 +1,8 @@
+import modules.datos as dat
+
 def juego_con_otro_jugador():
     print("Juego con otro jugador")
-    print("Jugador 1")
+    print("Jugador 1")      
     print("1. Piedra")
     print("2. Papel")
     print("3. Tijera")
