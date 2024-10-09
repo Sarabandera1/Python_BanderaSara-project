@@ -1,22 +1,29 @@
 import random
 
-def juego_con_maquina():
+def unoversusm():
     print("Juego con la máquina")
     print("1. Piedra")
     print("2. Papel")
     print("3. Tijera")
+    print("---------------------")
 
-    opcion = input("Ingrese una opción: ")
-
-    if opcion == "1":
+    opcion = int(input("Ingrese una opción: "))
+    
+    jugador=True
+    if opcion == 1:
         jugador = "Piedra"
-    elif opcion == "2":
+    elif opcion == 2:
         jugador = "Papel"
-    elif opcion == "3":
+    elif opcion == 3:
         jugador = "Tijera"
     else:
+        print("-----------------")
+        print(type(opcion))
+        print("-----------------")
+        print(jugador)
+        print("------------------")
         print("Opción inválida")
-        return juego_con_maquina()
+        return unoversusm()
 
     maquina = random.choice(["Piedra", "Papel", "Tijera"])
 
@@ -27,5 +34,9 @@ def juego_con_maquina():
         print("--------Empate---------")
     elif (jugador == "Piedra" and maquina == "Tijera") or (jugador == "Papel" and maquina == "Piedra") or (jugador == "Tijera" and maquina == "Papel"):
         print("--------Ganaste---------")
+        
     else:
         print("--------Perdiste---------")
+    
+    input('presione una tecla para continuar')
+    

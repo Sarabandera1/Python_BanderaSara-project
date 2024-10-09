@@ -1,11 +1,11 @@
-import modules.datos as dat
 
-def juego_con_otro_jugador():
+def unoversusuno():
     print("Juego con otro jugador")
     print("Jugador 1")      
     print("1. Piedra")
     print("2. Papel")
     print("3. Tijera")
+    print("------------------------")
 
     opcion1 = input("Ingrese una opción: ")
 
@@ -17,12 +17,13 @@ def juego_con_otro_jugador():
         jugador1 = "Tijera"
     else:
         print("Opción inválida")
-        return juego_con_otro_jugador()
+        return unoversusuno()
 
     print("Jugador 2")
     print("1. Piedra")
     print("2. Papel")
     print("3. Tijera")
+    print("------------------------")
 
     opcion2 = input("Ingrese una opción: ")
 
@@ -34,7 +35,7 @@ def juego_con_otro_jugador():
         jugador2 = "Tijera"
     else:
         print("Opción inválida")
-        return juego_con_otro_jugador()
+        return unoversusuno()
 
     print(f"\nJugador 1 elegió: {jugador1}")
     print(f"Jugador 2 elegió: {jugador2}\n")
@@ -42,6 +43,6 @@ def juego_con_otro_jugador():
     if jugador1 == jugador2:
         print("Empate")
     elif (jugador1 == "Piedra" and jugador2 == "Tijera") or (jugador1 == "Papel" and jugador2 == "Piedra") or (jugador1 == "Tijera" and jugador2 == "Papel"):
-        print("Jugador 1 ganó")
+        print("--Jugador 1 ganó--")
     else:
-        print("Jugador 2 ganó")
+        print("--Jugador 2 ganó--")

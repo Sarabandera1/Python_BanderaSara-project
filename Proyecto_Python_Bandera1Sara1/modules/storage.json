@@ -1,15 +1,16 @@
 {
-    "jugadores": [
-      {
-        "nombre": "Pepito Pérez",
-        "apodo": "pepo",
-        "puntos": 8,
-        "ganadas": 4,
-        "perdidas_vs_ia": 2
-      }
-    ],
-    "maquina": {
-      "ganadas": 5,
-      "perdidas": 7
+  "scores": [
+    {
+      "name": "Juan",
+      "scores": [100, 120, 130]
+    },
+    {
+      "name": "Alejandra",
+      "scores": [150, 160, 140]
+    },
+    {
+      "name": "Pepo",
+      "scores": [120, 110, 125]
     }
-  }
+  ]
+}
