@@ -1,3 +1,4 @@
+
 # #   4. Los tres mejores jugadores
 #     5. El jugador en el último puesto
 #     6. Los jugadores que más han perdido contra la máquina
@@ -21,3 +22,4 @@ def estadisticas():
         print("No hay puntajes registrados para la máquina.")
 
     input('\nPresione una tecla para volver al menú')
+

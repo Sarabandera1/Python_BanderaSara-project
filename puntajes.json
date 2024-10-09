@@ -1,4 +1,29 @@
 {
-    "players": [],
+    "players": [
+        {
+            "nickname": "ale",
+            "wins": 1
+        },
+        {
+            "name": "sara",
+            "nickname": "sa",
+            "wins": 0
+        },
+        {
+            "name": "alejk",
+            "nickname": "alejand",
+            "wins": 0
+        },
+        {
+            "name": "sara",
+            "nickname": "sara",
+            "wins": 0
+        },
+        {
+            "name": "aleja",
+            "nickname": "aleja",
+            "wins": 3
+        }
+    ],
     "machine": []
 }
