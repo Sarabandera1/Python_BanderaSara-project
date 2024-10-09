@@ -3,24 +3,21 @@
 #     6. Los jugadores que más han perdido contra la máquina
 #     7. Ver el promedio de jugadores que han ganado a la máquina
 
-import os
-def estadisticas (menue):
-    if (len(menue)<4):
-        print('Se necesitan minimo 3 jugadores para poder generar una estadistica')
-    else:
-
-
-def lsMejoresJugadores(puntajes):
-    print("Mostrando los tres mejores jugadores")
+def estadisticas():
+    puntajes = cargar_puntajes()
+    print("\n*** Estadísticas del Juego ***")
     
+    print("\nPuntajes de los jugadores:")
+    if puntajes["players"]:
+        for player in puntajes["players"]:
+            print(f"Jugador: {player['name']}, Ganó: {player['wins']} veces")
+    else:
+        print("No hay puntajes registrados para los jugadores.")
 
-def lsUltimoJugador(puntajes):
-    print("Mostrando el jugador en el último puesto")
+    print("\nPuntajes de la máquina:")
+    if "machine" in puntajes and puntajes["machine"]["wins"] > 0:
+        print(f"La máquina ganó: {puntajes['machine']['wins']} veces")
+    else:
+        print("No hay puntajes registrados para la máquina.")
 
-
-def lsJugadoresMasPerdido_ia(puntajes):
-    print("Listando los jugadores que más han perdido contra la IA")
-
-
-def promedioJugadoresGanan_ia(puntajes):
-    print("Calculando el promedio de jugadores que han ganado a la IA")
+    input('\nPresione una tecla para volver al menú')

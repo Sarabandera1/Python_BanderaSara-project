@@ -1,18 +1,34 @@
 import json
 import os
+from puntajes import cargar_puntajes, guardar_puntajes
 from unoversusuno import *
 from unoversusm import *
+
 
 def cargar_puntajes():
     if os.path.exists("puntajes.json"):
         with open("puntajes.json", "r") as archivo:
             return json.load(archivo)
     else:
-        return []
+        return {"players": [], "machine": []} 
+
 
 def guardar_puntajes(puntajes):
     with open("puntajes.json", "w") as archivo:
         json.dump(puntajes, archivo, indent=4)
+
+def estadisticas():
+    puntajes = cargar_puntajes()
+    print("\n*** Estadísticas del Juego ***")
+    
+    print("\nPuntajes de los jugadores:")
+    for player in puntajes["players"]:
+        print(f"Jugador: {player['name']}, Ganó: {player['wins']} veces")
+
+    print("\nPuntajes de la máquina:")
+    print(f"La máquina ganó: {puntajes['machine']['wins']} veces" if puntajes['machine'] else "No hay puntajes registrados para la máquina.")
+
+    input('\nPresione una tecla para volver al menú')
 
 def menu():
     while True:

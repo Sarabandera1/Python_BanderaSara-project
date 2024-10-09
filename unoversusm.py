@@ -1,4 +1,5 @@
 import random
+from puntajes import cargar_puntajes, guardar_puntajes  
 
 def unoversusm():
     print("Juego con la máquina")
@@ -30,6 +31,8 @@ def unoversusm():
     print(f"\nTú elegiste: {jugador}")
     print(f"Máquina elegió: {maquina}\n")
 
+    resultado = ""
+
     if jugador == maquina:
         print("--------Empate---------")
     elif (jugador == "Piedra" and maquina == "Tijera") or (jugador == "Papel" and maquina == "Piedra") or (jugador == "Tijera" and maquina == "Papel"):
@@ -37,6 +40,22 @@ def unoversusm():
         
     else:
         print("--------Perdiste---------")
+
+    puntajes = cargar_puntajes()
     
-    input('presione una tecla para continuar')
-    
+
+
+    if resultado == "Ganaste":
+        if not puntajes["players"]:
+            puntajes["players"].append({"name": "Jugador", "wins": 1})
+        else:
+            puntajes["players"][0]["wins"] += 1
+    elif resultado == "Perdiste":
+        if not puntajes["machine"]:
+            puntajes["machine"] = {"wins": 1}
+        else:
+            puntajes["machine"]["wins"] += 1
+
+    guardar_puntajes(puntajes)
+
+    input('Presione una tecla para continuar')
